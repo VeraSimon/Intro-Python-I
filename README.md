@@ -65,9 +65,9 @@ Each directory inside the `src/` directory presents exercises revolving around a
 
 The suggested order for going through each of the directories is:
 
-- `hello` -- Hello world
-- `bignum` -- Print some big numbers
-- `datatypes` -- Experiment with type conversion
+- [x] `hello` -- Hello world
+- [x] `bignum` -- Print some big numbers
+- [x] `datatypes` -- Experiment with type conversion
 - `modules` -- Learn to import from modules
 - `printing` -- Formatted print output
 - `lists` -- Python's version of arrays
