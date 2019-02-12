@@ -4,10 +4,7 @@
 import math
 
 def is_even(n):
-	if isinstance(n, int):
-		return int(n) % 2 == 0
-	else:
-		return math.nan
+	return int(n) % 2 == 0
 
 # Read a number from the keyboard
 num = input("Enter a number: ")
