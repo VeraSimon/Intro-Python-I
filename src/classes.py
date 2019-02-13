@@ -4,15 +4,18 @@
 # YOUR CODE HERE
 class LatLon:
     def __init__(self, lat, lon):
-        self.lat = lat
-        self.lon = lon
+        self.cacher = []
+        self.lat = str(lat)
+        self.lon = str(lon)
+        self.cacher.append(self.lat)
+        self.cacher.append(self.lon)
 
     def __str__(self):
-        props = vars(self)
-        s = ""
-        for k, v in props.items():
-            s += str(v) + " "
-        return s
+        # s = ""
+        # for st in self.cacher:
+        #     # s += str(st) + " "
+        #     s += ", ".join(st)
+        return ", ".join(self.cacher)
 
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
@@ -21,7 +24,8 @@ class LatLon:
 class Waypoint(LatLon):
     def __init__(self, name, lat, lon):
         super().__init__(lat, lon)
-        self.name = name
+        self.name = '"' + name + '"'
+        self.cacher.insert(0, self.name)
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
@@ -32,6 +36,8 @@ class Geocache(Waypoint):
         super().__init__(name, lat, lon)
         self.difficulty = "diff " + str(difficulty)
         self.size = "size " + str(size)
+        self.cacher.insert(1, self.difficulty)
+        self.cacher.insert(2, self.size)
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
